@@ -1,0 +1,830 @@
+# Official Espressif options
+menu.UploadSpeed=Upload Speed
+menu.USBMode=USB Mode
+menu.CDCOnBoot=USB CDC On Boot
+menu.MSCOnBoot=USB Firmware MSC On Boot
+menu.DFUOnBoot=USB DFU On Boot
+menu.UploadMode=Upload Mode
+menu.CPUFreq=CPU Frequency
+menu.FlashFreq=Flash Frequency
+menu.FlashMode=Flash Mode
+menu.FlashSize=Flash Size
+menu.PartitionScheme=Partition Scheme
+menu.DebugLevel=Core Debug Level
+menu.PSRAM=PSRAM
+menu.LoopCore=Arduino Runs On
+menu.EventsCore=Events Run On
+menu.MemoryType=Memory Type
+menu.EraseFlash=Erase All Flash Before Sketch Upload
+menu.JTAGAdapter=JTAG Adapter
+
+# Custom options
+menu.Revision=Board Revision
+menu.LORAWAN_REGION=LoRaWan Region
+menu.LoRaWanDebugLevel=LoRaWan Debug Level
+menu.LORAWAN_DEVEUI=LoRaWan DevEUI
+menu.LORAWAN_PREAMBLE_LENGTH=LoRaWan Preamble Length
+
+##############################################################
+
+materialPlane_Sensor.name=Material Plane Sensor (Production)
+materialPlane_Sensor.vid.0=0x16D0
+materialPlane_Sensor.pid.0=0x11CE
+
+materialPlane_Sensor.bootloader.tool=esptool_py
+materialPlane_Sensor.bootloader.tool.default=esptool_py
+
+materialPlane_Sensor.upload.tool=esptool_py
+materialPlane_Sensor.upload.tool.default=esptool_py
+materialPlane_Sensor.upload.tool.network=esp_ota
+
+materialPlane_Sensor.upload.maximum_size=1310720
+materialPlane_Sensor.upload.maximum_data_size=327680
+materialPlane_Sensor.upload.flags=
+materialPlane_Sensor.upload.extra_flags=
+materialPlane_Sensor.upload.use_1200bps_touch=true
+materialPlane_Sensor.upload.wait_for_upload_port=true
+
+materialPlane_Sensor.serial.disableDTR=false
+materialPlane_Sensor.serial.disableRTS=false
+
+materialPlane_Sensor.build.tarch=xtensa
+materialPlane_Sensor.build.bootloader_addr=0x0
+materialPlane_Sensor.build.target=esp32s3
+materialPlane_Sensor.build.mcu=esp32s3
+materialPlane_Sensor.build.core=esp32
+materialPlane_Sensor.build.variant=materialPlane_sensor
+materialPlane_Sensor.build.board=ESP32S3_DEV
+
+materialPlane_Sensor.build.usb_mode=0
+materialPlane_Sensor.build.cdc_on_boot=1
+materialPlane_Sensor.build.msc_on_boot=0
+materialPlane_Sensor.build.dfu_on_boot=0
+materialPlane_Sensor.build.f_cpu=240000000L
+materialPlane_Sensor.build.flash_size=4MB
+materialPlane_Sensor.build.flash_freq=80m
+materialPlane_Sensor.build.flash_mode=dio
+materialPlane_Sensor.build.boot=qio
+materialPlane_Sensor.build.boot_freq=80m
+materialPlane_Sensor.build.partitions=default
+materialPlane_Sensor.build.defines=
+materialPlane_Sensor.build.loop_core=
+materialPlane_Sensor.build.event_core=
+materialPlane_Sensor.build.psram_type=qspi
+materialPlane_Sensor.build.memory_type={build.boot}_{build.psram_type}
+
+## IDE 2.0 Seems to not update the value
+materialPlane_Sensor.menu.JTAGAdapter.default=Disabled
+materialPlane_Sensor.menu.JTAGAdapter.default.build.copy_jtag_files=0
+materialPlane_Sensor.menu.JTAGAdapter.builtin=Integrated USB JTAG
+materialPlane_Sensor.menu.JTAGAdapter.builtin.build.openocdscript=esp32s3-builtin.cfg
+materialPlane_Sensor.menu.JTAGAdapter.builtin.build.copy_jtag_files=1
+materialPlane_Sensor.menu.JTAGAdapter.external=FTDI Adapter
+materialPlane_Sensor.menu.JTAGAdapter.external.build.openocdscript=esp32s3-ftdi.cfg
+materialPlane_Sensor.menu.JTAGAdapter.external.build.copy_jtag_files=1
+materialPlane_Sensor.menu.JTAGAdapter.bridge=ESP USB Bridge
+materialPlane_Sensor.menu.JTAGAdapter.bridge.build.openocdscript=esp32s3-bridge.cfg
+materialPlane_Sensor.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+
+#materialPlane_Sensor.menu.PSRAM.disabled=Disabled
+#materialPlane_Sensor.menu.PSRAM.disabled.build.defines=
+#materialPlane_Sensor.menu.PSRAM.disabled.build.psram_type=qspi
+#materialPlane_Sensor.menu.PSRAM.enabled=QSPI PSRAM
+#materialPlane_Sensor.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM
+#materialPlane_Sensor.menu.PSRAM.enabled.build.psram_type=qspi
+#materialPlane_Sensor.menu.PSRAM.opi=OPI PSRAM
+#materialPlane_Sensor.menu.PSRAM.opi.build.defines=-DBOARD_HAS_PSRAM
+#materialPlane_Sensor.menu.PSRAM.opi.build.psram_type=opi
+
+#materialPlane_Sensor.menu.FlashMode.qio=QIO 80MHz
+#materialPlane_Sensor.menu.FlashMode.qio.build.flash_mode=dio
+#materialPlane_Sensor.menu.FlashMode.qio.build.boot=qio
+#materialPlane_Sensor.menu.FlashMode.qio.build.boot_freq=80m
+#materialPlane_Sensor.menu.FlashMode.qio.build.flash_freq=80m
+#materialPlane_Sensor.menu.FlashMode.qio120=QIO 120MHz
+#materialPlane_Sensor.menu.FlashMode.qio120.build.flash_mode=dio
+#materialPlane_Sensor.menu.FlashMode.qio120.build.boot=qio
+#materialPlane_Sensor.menu.FlashMode.qio120.build.boot_freq=120m
+#materialPlane_Sensor.menu.FlashMode.qio120.build.flash_freq=80m
+#materialPlane_Sensor.menu.FlashMode.dio=DIO 80MHz
+#materialPlane_Sensor.menu.FlashMode.dio.build.flash_mode=dio
+#materialPlane_Sensor.menu.FlashMode.dio.build.boot=dio
+#materialPlane_Sensor.menu.FlashMode.dio.build.boot_freq=80m
+#materialPlane_Sensor.menu.FlashMode.dio.build.flash_freq=80m
+#materialPlane_Sensor.menu.FlashMode.opi=OPI 80MHz
+#materialPlane_Sensor.menu.FlashMode.opi.build.flash_mode=dout
+#materialPlane_Sensor.menu.FlashMode.opi.build.boot=opi
+#materialPlane_Sensor.menu.FlashMode.opi.build.boot_freq=80m
+#materialPlane_Sensor.menu.FlashMode.opi.build.flash_freq=80m
+
+#materialPlane_Sensor.menu.FlashSize.4M=4MB (32Mb)
+#materialPlane_Sensor.menu.FlashSize.4M.build.flash_size=4MB
+#materialPlane_Sensor.menu.FlashSize.8M=8MB (64Mb)
+#materialPlane_Sensor.menu.FlashSize.8M.build.flash_size=8MB
+#materialPlane_Sensor.menu.FlashSize.8M.build.partitions=default_8MB
+#materialPlane_Sensor.menu.FlashSize.16M=16MB (128Mb)
+#materialPlane_Sensor.menu.FlashSize.16M.build.flash_size=16MB
+#materialPlane_Sensor.menu.FlashSize.32M=32MB (256Mb)
+#materialPlane_Sensor.menu.FlashSize.32M.build.flash_size=32MB
+
+#materialPlane_Sensor.menu.LoopCore.1=Core 1
+#materialPlane_Sensor.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+#materialPlane_Sensor.menu.LoopCore.0=Core 0
+#materialPlane_Sensor.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+#materialPlane_Sensor.menu.EventsCore.1=Core 1
+#materialPlane_Sensor.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+#materialPlane_Sensor.menu.EventsCore.0=Core 0
+#materialPlane_Sensor.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+#materialPlane_Sensor.menu.USBMode.hwcdc=Hardware CDC and JTAG
+#materialPlane_Sensor.menu.USBMode.hwcdc.build.usb_mode=1
+#materialPlane_Sensor.menu.USBMode.default=USB-OTG (TinyUSB)
+#materialPlane_Sensor.menu.USBMode.default.build.usb_mode=0
+
+#materialPlane_Sensor.menu.CDCOnBoot.default=Disabled
+#materialPlane_Sensor.menu.CDCOnBoot.default.build.cdc_on_boot=0
+#materialPlane_Sensor.menu.CDCOnBoot.cdc=Enabled
+#materialPlane_Sensor.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+
+#materialPlane_Sensor.menu.MSCOnBoot.default=Disabled
+#materialPlane_Sensor.menu.MSCOnBoot.default.build.msc_on_boot=0
+#materialPlane_Sensor.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+#materialPlane_Sensor.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+#materialPlane_Sensor.menu.DFUOnBoot.default=Disabled
+#materialPlane_Sensor.menu.DFUOnBoot.default.build.dfu_on_boot=0
+#materialPlane_Sensor.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+#materialPlane_Sensor.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+#materialPlane_Sensor.menu.UploadMode.default=UART0 / Hardware CDC
+#materialPlane_Sensor.menu.UploadMode.default.upload.use_1200bps_touch=false
+#materialPlane_Sensor.menu.UploadMode.default.upload.wait_for_upload_port=false
+#materialPlane_Sensor.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+#materialPlane_Sensor.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+#materialPlane_Sensor.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+#materialPlane_Sensor.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.default.build.partitions=default
+#materialPlane_Sensor.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+#materialPlane_Sensor.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+#materialPlane_Sensor.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+#materialPlane_Sensor.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+#materialPlane_Sensor.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.minimal.build.partitions=minimal
+#materialPlane_Sensor.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.no_ota.build.partitions=no_ota
+#materialPlane_Sensor.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+#materialPlane_Sensor.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+#materialPlane_Sensor.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+#materialPlane_Sensor.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+#materialPlane_Sensor.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+#materialPlane_Sensor.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+#materialPlane_Sensor.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+#materialPlane_Sensor.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+#materialPlane_Sensor.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+#materialPlane_Sensor.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.huge_app.build.partitions=huge_app
+#materialPlane_Sensor.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+#materialPlane_Sensor.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+#materialPlane_Sensor.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+#materialPlane_Sensor.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+#materialPlane_Sensor.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+#materialPlane_Sensor.menu.PartitionScheme.fatflash.build.partitions=ffat
+#materialPlane_Sensor.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+#materialPlane_Sensor.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+#materialPlane_Sensor.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+#materialPlane_Sensor.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+#materialPlane_Sensor.menu.PartitionScheme.rainmaker=RainMaker
+#materialPlane_Sensor.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+#materialPlane_Sensor.menu.PartitionScheme.rainmaker.upload.maximum_size=3145728
+
+#materialPlane_Sensor.menu.CPUFreq.240=240MHz (WiFi)
+#materialPlane_Sensor.menu.CPUFreq.240.build.f_cpu=240000000L
+#materialPlane_Sensor.menu.CPUFreq.160=160MHz (WiFi)
+#materialPlane_Sensor.menu.CPUFreq.160.build.f_cpu=160000000L
+#materialPlane_Sensor.menu.CPUFreq.80=80MHz (WiFi)
+#materialPlane_Sensor.menu.CPUFreq.80.build.f_cpu=80000000L
+#materialPlane_Sensor.menu.CPUFreq.40=40MHz
+#materialPlane_Sensor.menu.CPUFreq.40.build.f_cpu=40000000L
+#materialPlane_Sensor.menu.CPUFreq.20=20MHz
+#materialPlane_Sensor.menu.CPUFreq.20.build.f_cpu=20000000L
+#materialPlane_Sensor.menu.CPUFreq.10=10MHz
+#materialPlane_Sensor.menu.CPUFreq.10.build.f_cpu=10000000L
+
+materialPlane_Sensor.menu.UploadSpeed.921600=921600
+materialPlane_Sensor.menu.UploadSpeed.921600.upload.speed=921600
+materialPlane_Sensor.menu.UploadSpeed.115200=115200
+materialPlane_Sensor.menu.UploadSpeed.115200.upload.speed=115200
+materialPlane_Sensor.menu.UploadSpeed.256000.windows=256000
+materialPlane_Sensor.menu.UploadSpeed.256000.upload.speed=256000
+materialPlane_Sensor.menu.UploadSpeed.230400.windows.upload.speed=256000
+materialPlane_Sensor.menu.UploadSpeed.230400=230400
+materialPlane_Sensor.menu.UploadSpeed.230400.upload.speed=230400
+materialPlane_Sensor.menu.UploadSpeed.460800.linux=460800
+materialPlane_Sensor.menu.UploadSpeed.460800.macosx=460800
+materialPlane_Sensor.menu.UploadSpeed.460800.upload.speed=460800
+materialPlane_Sensor.menu.UploadSpeed.512000.windows=512000
+materialPlane_Sensor.menu.UploadSpeed.512000.upload.speed=512000
+
+materialPlane_Sensor.menu.DebugLevel.none=None
+materialPlane_Sensor.menu.DebugLevel.none.build.code_debug=0
+materialPlane_Sensor.menu.DebugLevel.error=Error
+materialPlane_Sensor.menu.DebugLevel.error.build.code_debug=1
+materialPlane_Sensor.menu.DebugLevel.warn=Warn
+materialPlane_Sensor.menu.DebugLevel.warn.build.code_debug=2
+materialPlane_Sensor.menu.DebugLevel.info=Info
+materialPlane_Sensor.menu.DebugLevel.info.build.code_debug=3
+materialPlane_Sensor.menu.DebugLevel.debug=Debug
+materialPlane_Sensor.menu.DebugLevel.debug.build.code_debug=4
+materialPlane_Sensor.menu.DebugLevel.verbose=Verbose
+materialPlane_Sensor.menu.DebugLevel.verbose.build.code_debug=5
+
+materialPlane_Sensor.menu.EraseFlash.none=Disabled
+materialPlane_Sensor.menu.EraseFlash.none.upload.erase_cmd=
+materialPlane_Sensor.menu.EraseFlash.all=Enabled
+materialPlane_Sensor.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+materialPlane_sensor_debug.name=Material Plane Sensor (Production Debug)
+materialPlane_sensor_debug.vid.0=0x16D0
+materialPlane_sensor_debug.pid.0=0x11CE
+
+materialPlane_sensor_debug.bootloader.tool=esptool_py
+materialPlane_sensor_debug.bootloader.tool.default=esptool_py
+
+materialPlane_sensor_debug.upload.tool=esptool_py
+materialPlane_sensor_debug.upload.tool.default=esptool_py
+materialPlane_sensor_debug.upload.tool.network=esp_ota
+
+materialPlane_sensor_debug.upload.maximum_size=1310720
+materialPlane_sensor_debug.upload.maximum_data_size=327680
+materialPlane_sensor_debug.upload.flags=
+materialPlane_sensor_debug.upload.extra_flags=
+materialPlane_sensor_debug.upload.use_1200bps_touch=false
+materialPlane_sensor_debug.upload.wait_for_upload_port=false
+
+materialPlane_sensor_debug.serial.disableDTR=false
+materialPlane_sensor_debug.serial.disableRTS=false
+
+materialPlane_sensor_debug.build.tarch=xtensa
+materialPlane_sensor_debug.build.bootloader_addr=0x0
+materialPlane_sensor_debug.build.target=esp32s3
+materialPlane_sensor_debug.build.mcu=esp32s3
+materialPlane_sensor_debug.build.core=esp32
+materialPlane_sensor_debug.build.variant=materialPlane_sensor_debug
+materialPlane_sensor_debug.build.board=ESP32S3_DEV
+
+materialPlane_sensor_debug.build.usb_mode=0
+materialPlane_sensor_debug.build.cdc_on_boot=1
+materialPlane_sensor_debug.build.msc_on_boot=0
+materialPlane_sensor_debug.build.dfu_on_boot=0
+materialPlane_sensor_debug.build.f_cpu=240000000L
+materialPlane_sensor_debug.build.flash_size=4MB
+materialPlane_sensor_debug.build.flash_freq=80m
+materialPlane_sensor_debug.build.flash_mode=dio
+materialPlane_sensor_debug.build.boot=qio
+materialPlane_sensor_debug.build.boot_freq=80m
+materialPlane_sensor_debug.build.partitions=default
+materialPlane_sensor_debug.build.defines=
+materialPlane_sensor_debug.build.loop_core=
+materialPlane_sensor_debug.build.event_core=
+materialPlane_sensor_debug.build.psram_type=qspi
+materialPlane_sensor_debug.build.memory_type={build.boot}_{build.psram_type}
+
+## IDE 2.0 Seems to not update the value
+materialPlane_sensor_debug.menu.JTAGAdapter.default=Disabled
+materialPlane_sensor_debug.menu.JTAGAdapter.default.build.copy_jtag_files=0
+materialPlane_sensor_debug.menu.JTAGAdapter.builtin=Integrated USB JTAG
+materialPlane_sensor_debug.menu.JTAGAdapter.builtin.build.openocdscript=esp32s3-builtin.cfg
+materialPlane_sensor_debug.menu.JTAGAdapter.builtin.build.copy_jtag_files=1
+materialPlane_sensor_debug.menu.JTAGAdapter.external=FTDI Adapter
+materialPlane_sensor_debug.menu.JTAGAdapter.external.build.openocdscript=esp32s3-ftdi.cfg
+materialPlane_sensor_debug.menu.JTAGAdapter.external.build.copy_jtag_files=1
+materialPlane_sensor_debug.menu.JTAGAdapter.bridge=ESP USB Bridge
+materialPlane_sensor_debug.menu.JTAGAdapter.bridge.build.openocdscript=esp32s3-bridge.cfg
+materialPlane_sensor_debug.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+
+#materialPlane_sensor_debug.menu.PSRAM.disabled=Disabled
+#materialPlane_sensor_debug.menu.PSRAM.disabled.build.defines=
+#materialPlane_sensor_debug.menu.PSRAM.disabled.build.psram_type=qspi
+#materialPlane_sensor_debug.menu.PSRAM.enabled=QSPI PSRAM
+#materialPlane_sensor_debug.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM
+#materialPlane_sensor_debug.menu.PSRAM.enabled.build.psram_type=qspi
+#materialPlane_sensor_debug.menu.PSRAM.opi=OPI PSRAM
+#materialPlane_sensor_debug.menu.PSRAM.opi.build.defines=-DBOARD_HAS_PSRAM
+#materialPlane_sensor_debug.menu.PSRAM.opi.build.psram_type=opi
+
+#materialPlane_sensor_debug.menu.FlashMode.qio=QIO 80MHz
+#materialPlane_sensor_debug.menu.FlashMode.qio.build.flash_mode=dio
+#materialPlane_sensor_debug.menu.FlashMode.qio.build.boot=qio
+#materialPlane_sensor_debug.menu.FlashMode.qio.build.boot_freq=80m
+#materialPlane_sensor_debug.menu.FlashMode.qio.build.flash_freq=80m
+#materialPlane_sensor_debug.menu.FlashMode.qio120=QIO 120MHz
+#materialPlane_sensor_debug.menu.FlashMode.qio120.build.flash_mode=dio
+#materialPlane_sensor_debug.menu.FlashMode.qio120.build.boot=qio
+#materialPlane_sensor_debug.menu.FlashMode.qio120.build.boot_freq=120m
+#materialPlane_sensor_debug.menu.FlashMode.qio120.build.flash_freq=80m
+#materialPlane_sensor_debug.menu.FlashMode.dio=DIO 80MHz
+#materialPlane_sensor_debug.menu.FlashMode.dio.build.flash_mode=dio
+#materialPlane_sensor_debug.menu.FlashMode.dio.build.boot=dio
+#materialPlane_sensor_debug.menu.FlashMode.dio.build.boot_freq=80m
+#materialPlane_sensor_debug.menu.FlashMode.dio.build.flash_freq=80m
+#materialPlane_sensor_debug.menu.FlashMode.opi=OPI 80MHz
+#materialPlane_sensor_debug.menu.FlashMode.opi.build.flash_mode=dout
+#materialPlane_sensor_debug.menu.FlashMode.opi.build.boot=opi
+#materialPlane_sensor_debug.menu.FlashMode.opi.build.boot_freq=80m
+#materialPlane_sensor_debug.menu.FlashMode.opi.build.flash_freq=80m
+
+#materialPlane_sensor_debug.menu.FlashSize.4M=4MB (32Mb)
+#materialPlane_sensor_debug.menu.FlashSize.4M.build.flash_size=4MB
+#materialPlane_sensor_debug.menu.FlashSize.8M=8MB (64Mb)
+#materialPlane_sensor_debug.menu.FlashSize.8M.build.flash_size=8MB
+#materialPlane_sensor_debug.menu.FlashSize.8M.build.partitions=default_8MB
+#materialPlane_sensor_debug.menu.FlashSize.16M=16MB (128Mb)
+#materialPlane_sensor_debug.menu.FlashSize.16M.build.flash_size=16MB
+#materialPlane_sensor_debug.menu.FlashSize.32M=32MB (256Mb)
+#materialPlane_sensor_debug.menu.FlashSize.32M.build.flash_size=32MB
+
+#materialPlane_sensor_debug.menu.LoopCore.1=Core 1
+#materialPlane_sensor_debug.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+#materialPlane_sensor_debug.menu.LoopCore.0=Core 0
+#materialPlane_sensor_debug.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+#materialPlane_sensor_debug.menu.EventsCore.1=Core 1
+#materialPlane_sensor_debug.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+#materialPlane_sensor_debug.menu.EventsCore.0=Core 0
+#materialPlane_sensor_debug.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+#materialPlane_sensor_debug.menu.USBMode.hwcdc=Hardware CDC and JTAG
+#materialPlane_sensor_debug.menu.USBMode.hwcdc.build.usb_mode=1
+#materialPlane_sensor_debug.menu.USBMode.default=USB-OTG (TinyUSB)
+#materialPlane_sensor_debug.menu.USBMode.default.build.usb_mode=0
+
+#materialPlane_sensor_debug.menu.CDCOnBoot.default=Disabled
+#materialPlane_sensor_debug.menu.CDCOnBoot.default.build.cdc_on_boot=0
+#materialPlane_sensor_debug.menu.CDCOnBoot.cdc=Enabled
+#materialPlane_sensor_debug.menu.CDCOnBoot.cdc.build.cdc_on_boot=1
+
+#materialPlane_sensor_debug.menu.MSCOnBoot.default=Disabled
+#materialPlane_sensor_debug.menu.MSCOnBoot.default.build.msc_on_boot=0
+#materialPlane_sensor_debug.menu.MSCOnBoot.msc=Enabled (Requires USB-OTG Mode)
+#materialPlane_sensor_debug.menu.MSCOnBoot.msc.build.msc_on_boot=1
+
+#materialPlane_sensor_debug.menu.DFUOnBoot.default=Disabled
+#materialPlane_sensor_debug.menu.DFUOnBoot.default.build.dfu_on_boot=0
+#materialPlane_sensor_debug.menu.DFUOnBoot.dfu=Enabled (Requires USB-OTG Mode)
+#materialPlane_sensor_debug.menu.DFUOnBoot.dfu.build.dfu_on_boot=1
+
+#materialPlane_sensor_debug.menu.UploadMode.default=UART0 / Hardware CDC
+#materialPlane_sensor_debug.menu.UploadMode.default.upload.use_1200bps_touch=false
+#materialPlane_sensor_debug.menu.UploadMode.default.upload.wait_for_upload_port=false
+#materialPlane_sensor_debug.menu.UploadMode.cdc=USB-OTG CDC (TinyUSB)
+#materialPlane_sensor_debug.menu.UploadMode.cdc.upload.use_1200bps_touch=true
+#materialPlane_sensor_debug.menu.UploadMode.cdc.upload.wait_for_upload_port=true
+
+#materialPlane_sensor_debug.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.default.build.partitions=default
+#materialPlane_sensor_debug.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+#materialPlane_sensor_debug.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+#materialPlane_sensor_debug.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+#materialPlane_sensor_debug.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.minimal.build.partitions=minimal
+#materialPlane_sensor_debug.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.no_ota.build.partitions=no_ota
+#materialPlane_sensor_debug.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+#materialPlane_sensor_debug.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+#materialPlane_sensor_debug.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.huge_app.build.partitions=huge_app
+#materialPlane_sensor_debug.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+#materialPlane_sensor_debug.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+#materialPlane_sensor_debug.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+#materialPlane_sensor_debug.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.fatflash.build.partitions=ffat
+#materialPlane_sensor_debug.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+#materialPlane_sensor_debug.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+#materialPlane_sensor_debug.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+#materialPlane_sensor_debug.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+#materialPlane_sensor_debug.menu.PartitionScheme.rainmaker=RainMaker
+#materialPlane_sensor_debug.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+#materialPlane_sensor_debug.menu.PartitionScheme.rainmaker.upload.maximum_size=3145728
+
+#materialPlane_sensor_debug.menu.CPUFreq.240=240MHz (WiFi)
+#materialPlane_sensor_debug.menu.CPUFreq.240.build.f_cpu=240000000L
+#materialPlane_sensor_debug.menu.CPUFreq.160=160MHz (WiFi)
+#materialPlane_sensor_debug.menu.CPUFreq.160.build.f_cpu=160000000L
+#materialPlane_sensor_debug.menu.CPUFreq.80=80MHz (WiFi)
+#materialPlane_sensor_debug.menu.CPUFreq.80.build.f_cpu=80000000L
+#materialPlane_sensor_debug.menu.CPUFreq.40=40MHz
+#materialPlane_sensor_debug.menu.CPUFreq.40.build.f_cpu=40000000L
+#materialPlane_sensor_debug.menu.CPUFreq.20=20MHz
+#materialPlane_sensor_debug.menu.CPUFreq.20.build.f_cpu=20000000L
+#materialPlane_sensor_debug.menu.CPUFreq.10=10MHz
+#materialPlane_sensor_debug.menu.CPUFreq.10.build.f_cpu=10000000L
+
+materialPlane_sensor_debug.menu.UploadSpeed.921600=921600
+materialPlane_sensor_debug.menu.UploadSpeed.921600.upload.speed=921600
+materialPlane_sensor_debug.menu.UploadSpeed.115200=115200
+materialPlane_sensor_debug.menu.UploadSpeed.115200.upload.speed=115200
+materialPlane_sensor_debug.menu.UploadSpeed.256000.windows=256000
+materialPlane_sensor_debug.menu.UploadSpeed.256000.upload.speed=256000
+materialPlane_sensor_debug.menu.UploadSpeed.230400.windows.upload.speed=256000
+materialPlane_sensor_debug.menu.UploadSpeed.230400=230400
+materialPlane_sensor_debug.menu.UploadSpeed.230400.upload.speed=230400
+materialPlane_sensor_debug.menu.UploadSpeed.460800.linux=460800
+materialPlane_sensor_debug.menu.UploadSpeed.460800.macosx=460800
+materialPlane_sensor_debug.menu.UploadSpeed.460800.upload.speed=460800
+materialPlane_sensor_debug.menu.UploadSpeed.512000.windows=512000
+materialPlane_sensor_debug.menu.UploadSpeed.512000.upload.speed=512000
+
+materialPlane_sensor_debug.menu.DebugLevel.none=None
+materialPlane_sensor_debug.menu.DebugLevel.none.build.code_debug=0
+materialPlane_sensor_debug.menu.DebugLevel.error=Error
+materialPlane_sensor_debug.menu.DebugLevel.error.build.code_debug=1
+materialPlane_sensor_debug.menu.DebugLevel.warn=Warn
+materialPlane_sensor_debug.menu.DebugLevel.warn.build.code_debug=2
+materialPlane_sensor_debug.menu.DebugLevel.info=Info
+materialPlane_sensor_debug.menu.DebugLevel.info.build.code_debug=3
+materialPlane_sensor_debug.menu.DebugLevel.debug=Debug
+materialPlane_sensor_debug.menu.DebugLevel.debug.build.code_debug=4
+materialPlane_sensor_debug.menu.DebugLevel.verbose=Verbose
+materialPlane_sensor_debug.menu.DebugLevel.verbose.build.code_debug=5
+
+materialPlane_sensor_debug.menu.EraseFlash.none=Disabled
+materialPlane_sensor_debug.menu.EraseFlash.none.upload.erase_cmd=
+materialPlane_sensor_debug.menu.EraseFlash.all=Enabled
+materialPlane_sensor_debug.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+materialPlane_sensor_diy_full.name=Material Plane Sensor (DIY Full)
+
+materialPlane_sensor_diy_full.bootloader.tool=esptool_py
+materialPlane_sensor_diy_full.bootloader.tool.default=esptool_py
+
+materialPlane_sensor_diy_full.upload.tool=esptool_py
+materialPlane_sensor_diy_full.upload.tool.default=esptool_py
+materialPlane_sensor_diy_full.upload.tool.network=esp_ota
+
+materialPlane_sensor_diy_full.upload.maximum_size=1310720
+materialPlane_sensor_diy_full.upload.maximum_data_size=327680
+materialPlane_sensor_diy_full.upload.flags=
+materialPlane_sensor_diy_full.upload.extra_flags=
+
+materialPlane_sensor_diy_full.serial.disableDTR=true
+materialPlane_sensor_diy_full.serial.disableRTS=true
+
+materialPlane_sensor_diy_full.build.tarch=xtensa
+materialPlane_sensor_diy_full.build.bootloader_addr=0x1000
+materialPlane_sensor_diy_full.build.target=esp32
+materialPlane_sensor_diy_full.build.mcu=esp32
+materialPlane_sensor_diy_full.build.core=esp32
+materialPlane_sensor_diy_full.build.variant=materialPlane_sensor_diy_full
+materialPlane_sensor_diy_full.build.board=ESP32_DEV
+
+materialPlane_sensor_diy_full.build.f_cpu=240000000L
+materialPlane_sensor_diy_full.build.flash_size=4MB
+materialPlane_sensor_diy_full.build.flash_freq=40m
+materialPlane_sensor_diy_full.build.flash_mode=dio
+materialPlane_sensor_diy_full.build.boot=dio
+materialPlane_sensor_diy_full.build.partitions=default
+materialPlane_sensor_diy_full.build.defines=
+materialPlane_sensor_diy_full.build.loop_core=
+materialPlane_sensor_diy_full.build.event_core=
+
+## IDE 2.0 Seems to not update the value
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.default=Disabled
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.default.build.copy_jtag_files=0
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.external=FTDI Adapter
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.external.build.openocdscript=esp32-wrover-kit-3.3v.cfg
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.external.build.copy_jtag_files=1
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.bridge=ESP USB Bridge
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.bridge.build.openocdscript=esp32-bridge.cfg
+#materialPlane_sensor_diy_full.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+
+#materialPlane_sensor_diy_full.menu.PSRAM.disabled=Disabled
+#materialPlane_sensor_diy_full.menu.PSRAM.disabled.build.defines=
+#materialPlane_sensor_diy_full.menu.PSRAM.disabled.build.extra_libs=
+#materialPlane_sensor_diy_full.menu.PSRAM.enabled=Enabled
+#materialPlane_sensor_diy_full.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue -mfix-esp32-psram-cache-strategy=memw
+#materialPlane_sensor_diy_full.menu.PSRAM.enabled.build.extra_libs=
+
+#materialPlane_sensor_diy_full.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.default.build.partitions=default
+#materialPlane_sensor_diy_full.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+#materialPlane_sensor_diy_full.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+#materialPlane_sensor_diy_full.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+#materialPlane_sensor_diy_full.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.minimal.build.partitions=minimal
+#materialPlane_sensor_diy_full.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.no_ota.build.partitions=no_ota
+#materialPlane_sensor_diy_full.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+#materialPlane_sensor_diy_full.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+#materialPlane_sensor_diy_full.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.huge_app.build.partitions=huge_app
+#materialPlane_sensor_diy_full.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+#materialPlane_sensor_diy_full.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+#materialPlane_sensor_diy_full.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+#materialPlane_sensor_diy_full.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.fatflash.build.partitions=ffat
+#materialPlane_sensor_diy_full.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+#materialPlane_sensor_diy_full.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+#materialPlane_sensor_diy_full.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+#materialPlane_sensor_diy_full.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+#materialPlane_sensor_diy_full.menu.PartitionScheme.rainmaker=RainMaker
+#materialPlane_sensor_diy_full.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+#materialPlane_sensor_diy_full.menu.PartitionScheme.rainmaker.upload.maximum_size=3145728
+
+#materialPlane_sensor_diy_full.menu.CPUFreq.240=240MHz (WiFi/BT)
+#materialPlane_sensor_diy_full.menu.CPUFreq.240.build.f_cpu=240000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.160=160MHz (WiFi/BT)
+#materialPlane_sensor_diy_full.menu.CPUFreq.160.build.f_cpu=160000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.80=80MHz (WiFi/BT)
+#materialPlane_sensor_diy_full.menu.CPUFreq.80.build.f_cpu=80000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.40=40MHz (40MHz XTAL)
+#materialPlane_sensor_diy_full.menu.CPUFreq.40.build.f_cpu=40000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.26=26MHz (26MHz XTAL)
+#materialPlane_sensor_diy_full.menu.CPUFreq.26.build.f_cpu=26000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.20=20MHz (40MHz XTAL)
+#materialPlane_sensor_diy_full.menu.CPUFreq.20.build.f_cpu=20000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.13=13MHz (26MHz XTAL)
+#materialPlane_sensor_diy_full.menu.CPUFreq.13.build.f_cpu=13000000L
+#materialPlane_sensor_diy_full.menu.CPUFreq.10=10MHz (40MHz XTAL)
+#materialPlane_sensor_diy_full.menu.CPUFreq.10.build.f_cpu=10000000L
+
+#materialPlane_sensor_diy_full.menu.FlashMode.qio=QIO
+#materialPlane_sensor_diy_full.menu.FlashMode.qio.build.flash_mode=dio
+#materialPlane_sensor_diy_full.menu.FlashMode.qio.build.boot=qio
+#materialPlane_sensor_diy_full.menu.FlashMode.dio=DIO
+#materialPlane_sensor_diy_full.menu.FlashMode.dio.build.flash_mode=dio
+#materialPlane_sensor_diy_full.menu.FlashMode.dio.build.boot=dio
+#materialPlane_sensor_diy_full.menu.FlashMode.qout=QOUT
+#materialPlane_sensor_diy_full.menu.FlashMode.qout.build.flash_mode=dout
+#materialPlane_sensor_diy_full.menu.FlashMode.qout.build.boot=qout
+#materialPlane_sensor_diy_full.menu.FlashMode.dout=DOUT
+#materialPlane_sensor_diy_full.menu.FlashMode.dout.build.flash_mode=dout
+#materialPlane_sensor_diy_full.menu.FlashMode.dout.build.boot=dout
+
+#materialPlane_sensor_diy_full.menu.FlashFreq.80=80MHz
+#materialPlane_sensor_diy_full.menu.FlashFreq.80.build.flash_freq=80m
+#materialPlane_sensor_diy_full.menu.FlashFreq.40=40MHz
+#materialPlane_sensor_diy_full.menu.FlashFreq.40.build.flash_freq=40m
+
+#materialPlane_sensor_diy_full.menu.FlashSize.4M=4MB (32Mb)
+#materialPlane_sensor_diy_full.menu.FlashSize.4M.build.flash_size=4MB
+#materialPlane_sensor_diy_full.menu.FlashSize.8M=8MB (64Mb)
+#materialPlane_sensor_diy_full.menu.FlashSize.8M.build.flash_size=8MB
+#materialPlane_sensor_diy_full.menu.FlashSize.8M.build.partitions=default_8MB
+#materialPlane_sensor_diy_full.menu.FlashSize.2M=2MB (16Mb)
+#materialPlane_sensor_diy_full.menu.FlashSize.2M.build.flash_size=2MB
+#materialPlane_sensor_diy_full.menu.FlashSize.2M.build.partitions=minimal
+#materialPlane_sensor_diy_full.menu.FlashSize.16M=16MB (128Mb)
+#materialPlane_sensor_diy_full.menu.FlashSize.16M.build.flash_size=16MB
+
+materialPlane_sensor_diy_full.menu.UploadSpeed.921600=921600
+materialPlane_sensor_diy_full.menu.UploadSpeed.921600.upload.speed=921600
+materialPlane_sensor_diy_full.menu.UploadSpeed.115200=115200
+materialPlane_sensor_diy_full.menu.UploadSpeed.115200.upload.speed=115200
+materialPlane_sensor_diy_full.menu.UploadSpeed.256000.windows=256000
+materialPlane_sensor_diy_full.menu.UploadSpeed.256000.upload.speed=256000
+materialPlane_sensor_diy_full.menu.UploadSpeed.230400.windows.upload.speed=256000
+materialPlane_sensor_diy_full.menu.UploadSpeed.230400=230400
+materialPlane_sensor_diy_full.menu.UploadSpeed.230400.upload.speed=230400
+materialPlane_sensor_diy_full.menu.UploadSpeed.460800.linux=460800
+materialPlane_sensor_diy_full.menu.UploadSpeed.460800.macosx=460800
+materialPlane_sensor_diy_full.menu.UploadSpeed.460800.upload.speed=460800
+materialPlane_sensor_diy_full.menu.UploadSpeed.512000.windows=512000
+materialPlane_sensor_diy_full.menu.UploadSpeed.512000.upload.speed=512000
+
+#materialPlane_sensor_diy_full.menu.LoopCore.1=Core 1
+#materialPlane_sensor_diy_full.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+#materialPlane_sensor_diy_full.menu.LoopCore.0=Core 0
+#materialPlane_sensor_diy_full.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+#materialPlane_sensor_diy_full.menu.EventsCore.1=Core 1
+#materialPlane_sensor_diy_full.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+#materialPlane_sensor_diy_full.menu.EventsCore.0=Core 0
+#materialPlane_sensor_diy_full.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+materialPlane_sensor_diy_full.menu.DebugLevel.none=None
+materialPlane_sensor_diy_full.menu.DebugLevel.none.build.code_debug=0
+materialPlane_sensor_diy_full.menu.DebugLevel.error=Error
+materialPlane_sensor_diy_full.menu.DebugLevel.error.build.code_debug=1
+materialPlane_sensor_diy_full.menu.DebugLevel.warn=Warn
+materialPlane_sensor_diy_full.menu.DebugLevel.warn.build.code_debug=2
+materialPlane_sensor_diy_full.menu.DebugLevel.info=Info
+materialPlane_sensor_diy_full.menu.DebugLevel.info.build.code_debug=3
+materialPlane_sensor_diy_full.menu.DebugLevel.debug=Debug
+materialPlane_sensor_diy_full.menu.DebugLevel.debug.build.code_debug=4
+materialPlane_sensor_diy_full.menu.DebugLevel.verbose=Verbose
+materialPlane_sensor_diy_full.menu.DebugLevel.verbose.build.code_debug=5
+
+materialPlane_sensor_diy_full.menu.EraseFlash.none=Disabled
+materialPlane_sensor_diy_full.menu.EraseFlash.none.upload.erase_cmd=
+materialPlane_sensor_diy_full.menu.EraseFlash.all=Enabled
+materialPlane_sensor_diy_full.menu.EraseFlash.all.upload.erase_cmd=-e
+
+##############################################################
+
+materialPlane_sensor_diy_basic.name=Material Plane Sensor (DIY Basic)
+
+materialPlane_sensor_diy_basic.bootloader.tool=esptool_py
+materialPlane_sensor_diy_basic.bootloader.tool.default=esptool_py
+
+materialPlane_sensor_diy_basic.upload.tool=esptool_py
+materialPlane_sensor_diy_basic.upload.tool.default=esptool_py
+materialPlane_sensor_diy_basic.upload.tool.network=esp_ota
+
+materialPlane_sensor_diy_basic.upload.maximum_size=1310720
+materialPlane_sensor_diy_basic.upload.maximum_data_size=327680
+materialPlane_sensor_diy_basic.upload.flags=
+materialPlane_sensor_diy_basic.upload.extra_flags=
+
+materialPlane_sensor_diy_basic.serial.disableDTR=true
+materialPlane_sensor_diy_basic.serial.disableRTS=true
+
+materialPlane_sensor_diy_basic.build.tarch=xtensa
+materialPlane_sensor_diy_basic.build.bootloader_addr=0x1000
+materialPlane_sensor_diy_basic.build.target=esp32
+materialPlane_sensor_diy_basic.build.mcu=esp32
+materialPlane_sensor_diy_basic.build.core=esp32
+materialPlane_sensor_diy_basic.build.variant=materialPlane_sensor_diy_basic
+materialPlane_sensor_diy_basic.build.board=ESP32_DEV
+
+materialPlane_sensor_diy_basic.build.f_cpu=240000000L
+materialPlane_sensor_diy_basic.build.flash_size=4MB
+materialPlane_sensor_diy_basic.build.flash_freq=40m
+materialPlane_sensor_diy_basic.build.flash_mode=dio
+materialPlane_sensor_diy_basic.build.boot=dio
+materialPlane_sensor_diy_basic.build.partitions=default
+materialPlane_sensor_diy_basic.build.defines=
+materialPlane_sensor_diy_basic.build.loop_core=
+materialPlane_sensor_diy_basic.build.event_core=
+
+## IDE 2.0 Seems to not update the value
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.default=Disabled
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.default.build.copy_jtag_files=0
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.external=FTDI Adapter
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.external.build.openocdscript=esp32-wrover-kit-3.3v.cfg
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.external.build.copy_jtag_files=1
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.bridge=ESP USB Bridge
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.bridge.build.openocdscript=esp32-bridge.cfg
+#materialPlane_sensor_diy_basic.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+
+#materialPlane_sensor_diy_basic.menu.PSRAM.disabled=Disabled
+#materialPlane_sensor_diy_basic.menu.PSRAM.disabled.build.defines=
+#materialPlane_sensor_diy_basic.menu.PSRAM.disabled.build.extra_libs=
+#materialPlane_sensor_diy_basic.menu.PSRAM.enabled=Enabled
+#materialPlane_sensor_diy_basic.menu.PSRAM.enabled.build.defines=-DBOARD_HAS_PSRAM -mfix-esp32-psram-cache-issue -mfix-esp32-psram-cache-strategy=memw
+#materialPlane_sensor_diy_basic.menu.PSRAM.enabled.build.extra_libs=
+
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.default.build.partitions=default
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.defaultffat.build.partitions=default_ffat
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.default_8MB=8M with spiffs (3MB APP/1.5MB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.default_8MB.build.partitions=default_8MB
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.default_8MB.upload.maximum_size=3342336
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.minimal=Minimal (1.3MB APP/700KB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.minimal.build.partitions=minimal
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.no_ota=No OTA (2MB APP/2MB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.no_ota.build.partitions=no_ota
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.no_ota.upload.maximum_size=2097152
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_3g=No OTA (1MB APP/3MB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_3g.build.partitions=noota_3g
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_3g.upload.maximum_size=1048576
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_ffat=No OTA (2MB APP/2MB FATFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_ffat.build.partitions=noota_ffat
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.huge_app.build.partitions=huge_app
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/190KB SPIFFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.fatflash=16M Flash (2MB APP/12.5MB FATFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.fatflash.build.partitions=ffat
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.fatflash.upload.maximum_size=2097152
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.app3M_fat9M_16MB=16M Flash (3MB APP/9.9MB FATFS)
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.app3M_fat9M_16MB.build.partitions=app3M_fat9M_16MB
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.app3M_fat9M_16MB.upload.maximum_size=3145728
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.rainmaker=RainMaker
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.rainmaker.build.partitions=rainmaker
+#materialPlane_sensor_diy_basic.menu.PartitionScheme.rainmaker.upload.maximum_size=3145728
+
+#materialPlane_sensor_diy_basic.menu.CPUFreq.240=240MHz (WiFi/BT)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.240.build.f_cpu=240000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.160=160MHz (WiFi/BT)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.160.build.f_cpu=160000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.80=80MHz (WiFi/BT)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.80.build.f_cpu=80000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.40=40MHz (40MHz XTAL)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.40.build.f_cpu=40000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.26=26MHz (26MHz XTAL)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.26.build.f_cpu=26000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.20=20MHz (40MHz XTAL)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.20.build.f_cpu=20000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.13=13MHz (26MHz XTAL)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.13.build.f_cpu=13000000L
+#materialPlane_sensor_diy_basic.menu.CPUFreq.10=10MHz (40MHz XTAL)
+#materialPlane_sensor_diy_basic.menu.CPUFreq.10.build.f_cpu=10000000L
+
+#materialPlane_sensor_diy_basic.menu.FlashMode.qio=QIO
+#materialPlane_sensor_diy_basic.menu.FlashMode.qio.build.flash_mode=dio
+#materialPlane_sensor_diy_basic.menu.FlashMode.qio.build.boot=qio
+#materialPlane_sensor_diy_basic.menu.FlashMode.dio=DIO
+#materialPlane_sensor_diy_basic.menu.FlashMode.dio.build.flash_mode=dio
+#materialPlane_sensor_diy_basic.menu.FlashMode.dio.build.boot=dio
+#materialPlane_sensor_diy_basic.menu.FlashMode.qout=QOUT
+#materialPlane_sensor_diy_basic.menu.FlashMode.qout.build.flash_mode=dout
+#materialPlane_sensor_diy_basic.menu.FlashMode.qout.build.boot=qout
+#materialPlane_sensor_diy_basic.menu.FlashMode.dout=DOUT
+#materialPlane_sensor_diy_basic.menu.FlashMode.dout.build.flash_mode=dout
+#materialPlane_sensor_diy_basic.menu.FlashMode.dout.build.boot=dout
+
+#materialPlane_sensor_diy_basic.menu.FlashFreq.80=80MHz
+#materialPlane_sensor_diy_basic.menu.FlashFreq.80.build.flash_freq=80m
+#materialPlane_sensor_diy_basic.menu.FlashFreq.40=40MHz
+#materialPlane_sensor_diy_basic.menu.FlashFreq.40.build.flash_freq=40m
+
+#materialPlane_sensor_diy_basic.menu.FlashSize.4M=4MB (32Mb)
+#materialPlane_sensor_diy_basic.menu.FlashSize.4M.build.flash_size=4MB
+#materialPlane_sensor_diy_basic.menu.FlashSize.8M=8MB (64Mb)
+#materialPlane_sensor_diy_basic.menu.FlashSize.8M.build.flash_size=8MB
+#materialPlane_sensor_diy_basic.menu.FlashSize.8M.build.partitions=default_8MB
+#materialPlane_sensor_diy_basic.menu.FlashSize.2M=2MB (16Mb)
+#materialPlane_sensor_diy_basic.menu.FlashSize.2M.build.flash_size=2MB
+#materialPlane_sensor_diy_basic.menu.FlashSize.2M.build.partitions=minimal
+#materialPlane_sensor_diy_basic.menu.FlashSize.16M=16MB (128Mb)
+#materialPlane_sensor_diy_basic.menu.FlashSize.16M.build.flash_size=16MB
+
+materialPlane_sensor_diy_basic.menu.UploadSpeed.921600=921600
+materialPlane_sensor_diy_basic.menu.UploadSpeed.921600.upload.speed=921600
+materialPlane_sensor_diy_basic.menu.UploadSpeed.115200=115200
+materialPlane_sensor_diy_basic.menu.UploadSpeed.115200.upload.speed=115200
+materialPlane_sensor_diy_basic.menu.UploadSpeed.256000.windows=256000
+materialPlane_sensor_diy_basic.menu.UploadSpeed.256000.upload.speed=256000
+materialPlane_sensor_diy_basic.menu.UploadSpeed.230400.windows.upload.speed=256000
+materialPlane_sensor_diy_basic.menu.UploadSpeed.230400=230400
+materialPlane_sensor_diy_basic.menu.UploadSpeed.230400.upload.speed=230400
+materialPlane_sensor_diy_basic.menu.UploadSpeed.460800.linux=460800
+materialPlane_sensor_diy_basic.menu.UploadSpeed.460800.macosx=460800
+materialPlane_sensor_diy_basic.menu.UploadSpeed.460800.upload.speed=460800
+materialPlane_sensor_diy_basic.menu.UploadSpeed.512000.windows=512000
+materialPlane_sensor_diy_basic.menu.UploadSpeed.512000.upload.speed=512000
+
+#materialPlane_sensor_diy_basic.menu.LoopCore.1=Core 1
+#materialPlane_sensor_diy_basic.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
+#materialPlane_sensor_diy_basic.menu.LoopCore.0=Core 0
+#materialPlane_sensor_diy_basic.menu.LoopCore.0.build.loop_core=-DARDUINO_RUNNING_CORE=0
+
+#materialPlane_sensor_diy_basic.menu.EventsCore.1=Core 1
+#materialPlane_sensor_diy_basic.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=1
+#materialPlane_sensor_diy_basic.menu.EventsCore.0=Core 0
+#materialPlane_sensor_diy_basic.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
+
+materialPlane_sensor_diy_basic.menu.DebugLevel.none=None
+materialPlane_sensor_diy_basic.menu.DebugLevel.none.build.code_debug=0
+materialPlane_sensor_diy_basic.menu.DebugLevel.error=Error
+materialPlane_sensor_diy_basic.menu.DebugLevel.error.build.code_debug=1
+materialPlane_sensor_diy_basic.menu.DebugLevel.warn=Warn
+materialPlane_sensor_diy_basic.menu.DebugLevel.warn.build.code_debug=2
+materialPlane_sensor_diy_basic.menu.DebugLevel.info=Info
+materialPlane_sensor_diy_basic.menu.DebugLevel.info.build.code_debug=3
+materialPlane_sensor_diy_basic.menu.DebugLevel.debug=Debug
+materialPlane_sensor_diy_basic.menu.DebugLevel.debug.build.code_debug=4
+materialPlane_sensor_diy_basic.menu.DebugLevel.verbose=Verbose
+materialPlane_sensor_diy_basic.menu.DebugLevel.verbose.build.code_debug=5
+
+materialPlane_sensor_diy_basic.menu.EraseFlash.none=Disabled
+materialPlane_sensor_diy_basic.menu.EraseFlash.none.upload.erase_cmd=
+materialPlane_sensor_diy_basic.menu.EraseFlash.all=Enabled
+materialPlane_sensor_diy_basic.menu.EraseFlash.all.upload.erase_cmd=-e
