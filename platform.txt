@@ -1,5 +1,5 @@
 name=Material Foundry
-version=1.0.0
+version=1.0.2
 
 tools.xtensa-esp32-elf-gcc.path={runtime.tools.xtensa-esp32-elf-gcc.path}
 tools.xtensa-esp32s2-elf-gcc.path={runtime.tools.xtensa-esp32s2-elf-gcc.path}

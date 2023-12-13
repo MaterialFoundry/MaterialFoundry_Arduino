@@ -61,8 +61,8 @@ static const uint8_t DAC2 = 26;
 //#define PAJ_SENSOR
 #define WIIMOTE_SENSOR
 //#define ID_SENSOR
-//#define BATTERY_LED
-//#define CONNECTION_LED
+#define BATTERY_LED
+#define CONNECTION_LED
 //#define EN_SW
 //#define PRODUCTION_BATTERY_MONITOR
 //#define TINYPICO_BATTERY_MONITOR
@@ -71,5 +71,17 @@ static const uint8_t DAC2 = 26;
 //I2C pins for WiiMote camera
 static const uint8_t SDA_PIN = 21;
 static const uint8_t SCL_PIN = 22;
+
+//LED pins
+static const uint8_t BATTERY_LED_GREEN_PIN    = 25;   //Green battery led pin
+static const uint8_t BATTERY_LED_RED_PIN      = 26;   //Red battery led pin
+static const uint8_t CONNECTION_LED_GREEN_PIN = 27;   //Green connection led pin
+static const uint8_t CONNECTION_LED_RED_PIN   = 15;   //Red connection led pin
+
+//LED channels
+static const uint8_t BATTERY_LED_GREEN        = 0;    //Green battery led channel
+static const uint8_t BATTERY_LED_RED          = 1;    //Red battery led channel
+static const uint8_t CONNECTION_LED_GREEN     = 2;    //Green connection led channel
+static const uint8_t CONNECTION_LED_RED       = 3;    //Red connection led channel
 
 #endif /* Pins_Arduino_h */

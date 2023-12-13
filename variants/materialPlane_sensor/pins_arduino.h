@@ -74,7 +74,7 @@ static const uint8_t T13 = 13;
 static const uint8_t T14 = 14;
 
 /* Material Plane Sensor specific definitions */
-
+#define PRODUCTION_HW
 #define HARDWARE_VARIANT                    "Production"
 #define HARDWARE_VERSION                    "1.0"
 #define NATIVE_USB
@@ -103,10 +103,10 @@ static const uint8_t MAX17260_SCL_PIN       = 40;   //SCL pin
 static const uint8_t MAX17260_ALERT_PIN     = 42;   //Alert pin for MAX17260
 
 //MCP73871 pins
-static const uint8_t MCP73871_USB_SEL_PIN   = 39;   //input, select between USB (low) or AC-DC (high)
+static const uint8_t MCP73871_USB_SEL_PIN   = 38;   //input, select between USB (low) or AC-DC (high)
 static const uint8_t MCP73871_PROG2_PIN     = 37;   //input, USB current select, 100mA (low) or 500mA (high) => ext pullup
 static const uint8_t MCP73871_TE_PIN        = 47;   //input, safety time enable (en == low)
-static const uint8_t MCP73871_CE_PIN        = 38;   //input, charge enable (en == high) => ext pullup
+static const uint8_t MCP73871_CE_PIN        = 39;   //input, charge enable (en == high) => ext pullup
 static const uint8_t MCP73871_PG_PIN        = 36;   //output, power good (open-drain)
 static const uint8_t MCP73871_STAT1_PIN     = 48;   //output, stat1 (open-drain)
 static const uint8_t MCP73871_STAT2_PIN     = 35;   //output, stat2 (open-drain)
