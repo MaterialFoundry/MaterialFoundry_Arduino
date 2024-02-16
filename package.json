@@ -1,6 +1,6 @@
 {
   "name": "materialFoundryArduino",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Arduino Framework for the Material Foundry hardware",
   "keywords": [
     "framework",

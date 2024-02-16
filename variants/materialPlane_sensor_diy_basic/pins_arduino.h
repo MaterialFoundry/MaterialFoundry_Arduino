@@ -61,8 +61,8 @@ static const uint8_t DAC2 = 26;
 //#define PAJ_SENSOR
 #define WIIMOTE_SENSOR
 //#define ID_SENSOR
-#define BATTERY_LED
-#define CONNECTION_LED
+//#define BATTERY_LED
+//#define CONNECTION_LED
 //#define EN_SW
 //#define PRODUCTION_BATTERY_MONITOR
 //#define TINYPICO_BATTERY_MONITOR
